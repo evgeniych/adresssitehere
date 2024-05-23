@@ -1,0 +1,369 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap');
+
+:root {
+    --title: #3D087C;
+    --title-select: #FC7C3C;
+    --text: #1F1F1F;
+    --background: #FCFDFA;
+}
+* {
+    font-family: "Roboto Flex", sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: sans-serif;
+}
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: url("img/background.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+}
+
+#step-2,
+#step-3,
+#step-4  {
+    display: none;
+}
+
+.madal {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 334px;
+    background: var(--background);
+    padding: 40px 24px;
+    border-radius: 30px
+}
+.madal__title {
+    color: var(--title);
+    text-transform: uppercase;
+    font-size: 24px;
+    font-weight: 600;
+    text-align: center;
+}
+.madal__title span {
+    color: var(--title-select);
+    display: block;
+}
+.modal__img-wraper {
+    padding: 24px 0;
+    text-align: center;
+}
+.modal__img-wraper img:first-child {
+    padding-right: 8px;
+}
+.modal__prediction {
+    text-transform: uppercase;
+    font-size: 12px;
+    text-align: center;
+}
+button {
+    width: 100%;
+    background: var(--title-select);
+    border: 1px solid #EB7119;
+    border-radius: 99px;
+    margin-top: 32px;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    color: var(--background);
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 20px;
+}
+button:hover {
+    cursor: pointer;
+}
+
+/* ---- Step 2 -----*/
+#modal__form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.modal__form__form-group {
+    width: 100%;
+    margin-bottom: 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.modal__form__form-group label {
+    color: var(--title);
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.modal__form__form-group-date {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.modal__form__form-group-date select,
+.modal__form__form-group select,
+.modal__form__form-group-date select option,
+.modal__form__form-group select option {
+    border: 1px solid var(--text);
+    border-radius: 30px;
+    padding: 8px 17px;
+    font-size: 16px;
+    color: #BFBFBF;
+    appearance: none;
+    background-image: url("img/arrow-down.svg");
+    background-repeat: no-repeat;
+    background-position: right 14px top 9px;
+}
+.modal__form__form-group-date select option {
+    font-size: 16px;
+    color: #BFBFBF;
+}
+#step-2-btn {
+    margin-top: 0;
+}
+#day {
+    width: 85px;
+    margin-right: 8px;
+}
+#month {
+    width: 100px;
+    margin-right: 8px;
+}
+#year {
+    width: 85px;
+}
+#town {
+    width: 100%;
+    margin-bottom: 8px;
+}
+
+.modal__form__form-group__no-town {
+    width: 100%;
+}
+.modal__form__form-group .no-town {
+    font-size: 14px;
+    color: #989898;
+    font-weight: 400;
+    text-transform: capitalize;
+}
+
+.modal__form__form-group__no-town input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.modal__form__form-group__no-town label {
+    display: inline-block;
+    padding-left: 36px;
+    position: relative;
+    user-select: none;
+}
+
+.modal__form__form-group__no-town label::before {
+    content: "";
+    position: absolute;
+    cursor: pointer;
+    left: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 16px;
+    height: 16px;
+    background: url("img/uncheck.png") no-repeat center center;
+    background-size: contain;
+}
+
+.modal__form__form-group__no-town input:checked + label::before {
+    cursor: pointer;
+    background: url("img/check.png") no-repeat center center;
+    background-size: contain;
+}
+#step-2 {
+    margin: 0;
+}
+
+/* ---- Step 3 ----- */
+.madal__progress {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 32px 0;
+}
+.madal__progress__circle {
+    position: relative;
+    width: 129px;
+    height: 129px;
+    border-radius: 50%;
+        background: conic-gradient(var(--title-select) 0deg, var(--title-select) 0deg, rgb(252, 124, 60, 0.1) 0deg, rgb(252, 124, 60, 0.1) 360deg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.madal__progress__circle::before {
+    content: '';
+    position: absolute;
+    width: 123px;
+    height: 123px;
+    border-radius: 50%;
+    background: var(--background);
+}
+
+.madal__progress__circle__number {
+    position: relative;
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--title)
+}
+
+.madal__progress-description ul {
+    list-style: none;
+    margin-bottom: 32px;
+}
+.madal__progress-description ul li {
+    display: flex;
+    margin-bottom: 12px;
+    font-size: 13px;
+}
+.madal__progress-description ul li img {
+    padding-right: 4px;
+}
+.madal__progress-description ul li:last-child {
+    margin-bottom: 0;
+}
+.madal__progress-description button {
+    margin-top: 0;
+    background: #FFF6EF;
+    color: #000;
+    border: 1px solid var(--title-select);
+    padding: 12px 24px;
+    font-size: 17px;
+}
+
+/* ----- Step 4 - Calendar----- */
+.madal__calendar {
+    box-sizing: unset;
+    width: 300px;
+    border: 1px solid #EFEFEF;
+    border-radius: 10px;
+}
+
+.madal__calendar__header {
+    display: flex;
+    justify-content: space-evenly;
+    border-bottom: 1px solid #eee;
+    font-weight: bold;
+    color: var(--title);
+}
+.madal__calendar__header div {
+    width: 36px;
+    padding: 16px 0;
+    text-align: center;
+}
+
+.madal__calendar__days {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    padding: 8px 0;
+    overflow: hidden;
+}
+
+.madal__calendar__days div {
+    width: 36px;
+    height: 36px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    border-radius: 50%;
+    z-index: 9;
+}
+
+.madal__calendar__days div span {
+    font-size: 10px;
+    position: absolute;
+    width: max-content;
+    color: var(--title-select);
+    text-transform: uppercase;
+}
+
+.madal__calendar__days .relationship-issues,
+.madal__calendar__days .health-issues {
+    color: var(--background);
+    background: var(--title-select);
+}
+.money-issues {
+    color: var(--title);
+    border: 2px solid var(--title);
+    border-radius: 50%;
+    position: relative;
+}
+
+.relationship-issues span {
+    top: -5px;
+    right: -122px;
+}
+.money-issues span {
+    top: -15px;
+    left: 27px;
+}
+.health-issues span {
+    top: -5px;
+    left: 48px;
+}
+.highlight {
+    background: var(--title-select);
+    color: #fff;
+}
+
+.issues-period {
+    color: #C04203;
+}
+.issues-period:before,
+.issues-period:after {
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 20px;
+    background-color: #fde3ce;
+    z-index: -1;
+}
+.issues-period:before {
+    right: 14px;
+}
+.issues-period:after {
+    left: 18px;
+}
+
+.relationship-issues:after,
+.health-issues:after {
+    content: "";
+    position: absolute;
+    right: 0;
+    width: 3px;
+    height: 20px;
+    background-color: #fde3ce;
+    z-index: 8;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 10% 97%, 54% 83%, 88% 66%, 96% 40%, 64% 18%, 2% 1%);
+}
+
+.madal__progress-description {
+    width: 286px;
+    padding: 16px 0;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+#step-4-btn {
+    margin-top: 0;
+}
